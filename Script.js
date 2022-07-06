@@ -2,13 +2,19 @@
 
 function show_info(value) {
     console.log(value);
-    
-    var xhttp = new XMLHttpRequest();
-    xhttp.onload = function() {
-        document.getElementById('demo').innerHTML = this.responseText;
+
+    if(value == ""){
+        return;
     }
-    xhttp.open("GET", "Dany.html");
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            document.getElementById('demo').innerHTML = xhttp.responseText;
+        }
+    };
+    xhttp.open("GET", value + '.html', true);
     xhttp.send();
 
-    return;
+    
 }
