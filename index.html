@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html>
-<title>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ajax_2</title>
     <script src="Script.js"></script>
-</title>
+    <link href="Styles.css" rel="stylesheet" />
+</head>
 
 
 <body>
 
 <div id="D1">
 <h1>Ajax Test </h1>
-<br>
 </div>
     
     
 <div id="demo">
 <h2>Info goes here:</h2>
+<hr>
 </div>
 
 
 <div id="D2">
-<select>
-    <option value=""> Choose one: </option>
-    <option value="Dany"> Dany G </option>
-    <option value="Marina"> Mari G </option>
-</select>
+    <form>
+        <select name="Person" onchange="show_info(this.value)">
+            <option value=""> Choose one: </option>
+            <option value="Dany"> Dany G </option>
+            <option value="Marina"> Mari G </option>
+        </select>
+    </form>
 </div>
 
 
